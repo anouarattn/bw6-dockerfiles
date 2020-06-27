@@ -18,8 +18,8 @@ To create an envirennement consisting of Tibco BW6 Agent + TEA we need to :
       ```docker run -dt --name INTEG --hostname INTEG --rm -p  8771:8777 env:latest```
       - QA Envirennement 
       
-      ```docker run -dt --name INTEG --hostname QA --rm -p  8772:8777 env:latest```
+      ```docker run -dt --name QA --hostname QA --rm -p  8772:8777 env:latest```
      
       - Production Envirennement
       
-      ```docker run -dt --name INTEG --hostname PROD --rm -p  8773:8777 env:latest```
+      ```docker run -dt --name PROD --hostname PROD --rm -p  8773:8777 env:latest```
