@@ -3,7 +3,7 @@ FROM debian:stretch
 MAINTAINER BAKRI Anouar bakri.anouar@gmail.com https://github.com/anouarattn
 # base
 
-ADD /binaires/TIB_BW-dev_6.*.zip /tmp/install/
+ADD TIB_BW-dev_6.*.zip /tmp/install/
 
 ADD bootstrapper.sh /opt/tibco/bootstrapper.sh
 
