@@ -23,3 +23,5 @@ RUN sed -i 's/<entry key="environmentName">.*<\/entry>/<entry key="environmentNa
 	sed -i 's/<entry key="configDirectoryRoot">.*<\/entry>/<entry key="configDirectoryRoot">\/home\/tibusr<\/entry>/g' /tmp/install/tibbw/TIBCOUniversalInstaller_BW-dev_6.5.*.silent && \
 	/tmp/install/tibbw/TIBCOUniversalInstaller-lnx-x86-64.bin -silent  && \
 	rm -rf /tmp/install && find /opt/tibco -name doc -type d | xargs rm -fr
+	
+CMD ["/opt/tibco/bootstrapper.sh"]
