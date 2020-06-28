@@ -15,15 +15,15 @@ To create an envirennement consisting of Tibco BW6 Agent + TEA we need to :
   2.  Run envirennement 
       - Integration Envirennement
       
-      ```docker run -dt --name INTEG --hostname INTEG -p  8771:8777 env:latest```
+      ```docker run -dt --name INTEG --hostname INTEG -p  8771:8777 -p 8079:8079 env:latest```
 	  
       - QA Envirennement 
       
-      ```docker run -dt --name QA --hostname QA -p  8772:8777 env:latest```
+      ```docker run -dt --name QA --hostname QA -p  8772:8777 -p 8078:8079 env:latest```
      
       - Production Envirennement
       
-      ```docker run -dt --name PROD --hostname PROD -p  8773:8777 env:latest```
+      ```docker run -dt --name PROD --hostname PROD -p  8773:8777 -p 8077:8079 env:latest```
 
 # Creating dev bw6 studio container
 
