@@ -10,8 +10,8 @@ RUN apt-get update && apt-get install apt-utils wget unzip openjdk-8-jdk curl ma
 
 RUN pip3 install fabric xmltodict xmlschema
 
-RUN groupadd -r tibgrp -g 433 && useradd -u 431 -r -m -g tibgrp -d /home/tibusr -s /bin/bash -c "Tibco user" tibusr  && chown -R tibusr:tibgrp /home/tibusr && \ 
-    chown -R tibusr:tibgrp /opt/tibco && mkdir /home/tibusr/tibco-conf  && \
+RUN groupadd -r tibgrp -g 433 && useradd -u 431 -r -m -g tibgrp -d /home/tibusr -s /bin/bash -c "Tibco user" tibusr  && chown -R tibusr:tibgrp /home/tibusr && mkdir /opt/tibco && \ 
+    chown -R tibusr:tibgrp /opt/tibco && mkdir /home/tibusr/tibco-conf  &&  \
 	mkdir -p /tmp/install/tibbw && unzip /tmp/install/TIB_BW-dev_6.*.zip -d /tmp/install/tibbw/ && chown -R tibusr:tibgrp /tmp/install
 
 USER tibusr
