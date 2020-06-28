@@ -43,4 +43,4 @@ To create an envirennement consisting of Tibco BW6 Agent + TEA we need to :
 	
   2.  Run azure agent container 
 
-	```docker run -dt --hostname agent-azure -e AZP_URL=TO_BE_REPLACED -e AZP_TOKEN=TO_BE_REPLACED -e AZP_POOL=TO_BE_REPLACED agentazure:latest
+	```docker run -dt --name agent-azure --hostname agent-azure -e AZP_URL=TO_BE_REPLACED -e AZP_TOKEN=TO_BE_REPLACED -e AZP_POOL=TO_BE_REPLACED agentazure:latest
