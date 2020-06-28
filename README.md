@@ -33,7 +33,7 @@ To create an envirennement consisting of Tibco BW6 Agent + TEA we need to :
 	
   2.  Run  
 	
-	```docker run -it -p  6081:80  dev:latest```
+	```docker run -dt -p  6081:80  dev:latest```
 
 # Creating Azure Agent container 
 
