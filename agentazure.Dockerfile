@@ -30,4 +30,7 @@ RUN sed -i 's/<entry key="environmentName">.*<\/entry>/<entry key="environmentNa
 	/tmp/install/tibbw/TIBCOUniversalInstaller-lnx-x86-64.bin -silent  && \
 	rm -rf /tmp/install && find /opt/tibco -name doc -type d | xargs rm -fr
 
+RUN git config --global user.email "devops@all.com"
+RUN git config --global user.name "devops"
+
 CMD ["/opt/tibco/start.sh"]
