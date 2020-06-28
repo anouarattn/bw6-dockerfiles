@@ -17,5 +17,7 @@ RUN apt-get update && apt-get install apt-utils wget unzip openjdk-8-jre curl ma
 	sed -i 's/<entry key="LGPLAssemblyPath">.*<\/entry>/<entry key="LGPLAssemblyPath">\/opt\/tibco\/thirdpartysoftware<\/entry>/g' /tmp/install/tibbw/TIBCOUniversalInstaller_BW-dev_6.5.*.silent && \
 	sed -i 's/<entry key="selectedProfiles">.*<\/entry>/<entry key="selectedProfiles">Typical<\/entry>/g' /tmp/install/tibbw/TIBCOUniversalInstaller_BW-dev_6.5.*.silent && \
 	/bin/bash /tmp/install/tibbw/TIBCOUniversalInstaller-lnx-x86-64.bin -silent && \
-	rm -rf /tmp/install && find /opt/tibco -name doc -type d | xargs rm -fr && git config --global credential.helper store
+	rm -rf /tmp/install && find /opt/tibco -name doc -type d | xargs rm -fr
+	
+
 	
