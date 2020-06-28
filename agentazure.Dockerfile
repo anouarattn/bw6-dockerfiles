@@ -7,7 +7,7 @@ RUN echo "APT::Get::Assume-Yes \"true\";" > /etc/apt/apt.conf.d/90assumeyes
 ADD TIB_BW-dev_6.*.zip /tmp/install/
 
 RUN apt-get update \
-&& apt-get install -y --no-install-recommends ca-certificates curl jq git iputils-ping libcurl4 libicu60 libunwind8 netcat apt-utils wget unzip openjdk-8-jdk curl maven git-all sudo python3 python3-pip
+&& apt-get install -y --no-install-recommends ca-certificates curl jq git-all iputils-ping libcurl4 libicu60 libunwind8 netcat apt-utils wget unzip openjdk-8-jdk curl maven git-all sudo python3 python3-pip
 
 RUN pip3 install fabric xmltodict xmlschema
 
