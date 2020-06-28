@@ -11,7 +11,7 @@ Having TIB_BW-dev_6.5.0_linux26gl23_x86_64.zip install zip in  root folder
 # Creating an envirennement
 To create an envirennement consisting of Tibco BW6 Agent + TEA we need to :
   1. Build the base image base.Dockerfile
-  ```docker build --rm -t="env:latest" . -f .\env.Dockerfile```
+  ```docker build --rm -t="env:latest" . -f env.Dockerfile```
   2.  Run envirennement 
       - Integration Envirennement
       
