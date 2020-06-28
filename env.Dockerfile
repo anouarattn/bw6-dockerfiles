@@ -17,7 +17,6 @@ RUN groupadd -r tibgrp -g 433 && useradd -u 431 -r -m -g tibgrp -d /home/tibusr 
 USER tibusr
 
 ADD bootstrapper.sh /opt/tibco/bootstrapper.sh
-RUN chmod +x /opt/tibco/bootstrapper.sh
 
 RUN sed -i 's/<entry key="environmentName">.*<\/entry>/<entry key="environmentName">CAE<\/entry>/g' /tmp/install/tibbw/TIBCOUniversalInstaller_BW-dev_6.5.*.silent && \
 	sed -i 's/<entry key="installationRoot">.*<\/entry>/<entry key="installationRoot">\/opt\/tibco<\/entry>/g' /tmp/install/tibbw/TIBCOUniversalInstaller_BW-dev_6.5.*.silent && \
