@@ -8,9 +8,11 @@ ADD TIB_BW-dev_6.*.zip /tmp/install/
 ADD bootstrapper.sh /opt/tibco/bootstrapper.sh
 
 
-RUN apt-get update && apt-get install apt-utils wget unzip openjdk-8-jdk curl maven git-all -y
+RUN apt-get update && apt-get install apt-utils wget unzip openjdk-8-jdk curl maven git-all sudo python3 python3-pip -y
 
-RUN groupadd -r tibgrp -g 433 && useradd -u 431 -r -m -g tibgrp -d /home/tibusr -s /bin/bash -c "TIBCO Docker image user" tibusr  && chown -R tibusr:tibgrp /home/tibusr && \ 
+RUN pip3 install fabric xmltodict xmlschema
+
+RUN groupadd -r tibgrp -g 433 && useradd -u 431 -r -m -g tibgrp -d /home/tibusr -s /bin/bash -c "Tibco user" tibusr  && chown -R tibusr:tibgrp /home/tibusr && \ 
     chown -R tibusr:tibgrp /opt/tibco && mkdir /home/tibusr/tibco-conf  && \
 	mkdir -p /tmp/install/tibbw && unzip /tmp/install/TIB_BW-dev_6.*.zip -d /tmp/install/tibbw/ && chown -R tibusr:tibgrp /tmp/install
 
