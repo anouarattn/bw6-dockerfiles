@@ -8,7 +8,7 @@ ADD TIB_BW-dev_6.*.zip /tmp/install/
 
 
 
-RUN add-apt-repository ppa:rabbitvcs/ppa && apt-get update && apt-get install apt-utils wget unzip rabbitvcs-nautilus openjdk-8-jre onboard curl maven git-all -y && \ 
+RUN  apt-get update && apt-get install apt-utils wget unzip git-cola openjdk-8-jre onboard curl maven git-all -y && \ 
 	groupadd -r tibgrp -g 433 && useradd -u 431 -r -m -g tibgrp -d /home/tibusr -s /bin/bash -c "TIBCO Docker image user" tibusr && chown -R tibusr:tibgrp /home/tibusr && \ 
     mkdir /opt/tibco && chown -R tibusr:tibgrp /opt/tibco && mkdir -p /tmp/install && chown -R tibusr:tibgrp /tmp/install && \ 
 	mkdir -p /tmp/install/tibbw && unzip /tmp/install/TIB_BW-dev_6.*.zip -d /tmp/install/tibbw/ && \
