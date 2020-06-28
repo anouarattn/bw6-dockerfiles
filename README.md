@@ -15,15 +15,15 @@ To create an envirennement consisting of Tibco BW6 Agent + TEA we need to :
   2.  Run envirennement 
       - Integration Envirennement
       
-      ```docker run -dt --name INTEG --hostname INTEG --rm -p  8771:8777 env:latest```
+      ```docker run -dt --name INTEG --hostname INTEG -p  8771:8777 env:latest```
 	  
       - QA Envirennement 
       
-      ```docker run -dt --name QA --hostname QA --rm -p  8772:8777 env:latest```
+      ```docker run -dt --name QA --hostname QA -p  8772:8777 env:latest```
      
       - Production Envirennement
       
-      ```docker run -dt --name PROD --hostname PROD --rm -p  8773:8777 env:latest```
+      ```docker run -dt --name PROD --hostname PROD -p  8773:8777 env:latest```
 
 # Creating dev bw6 studio container
 
@@ -33,7 +33,7 @@ To create an envirennement consisting of Tibco BW6 Agent + TEA we need to :
 	
   2.  Run  
 	
-	```docker run -it --rm -p  6081:80 -v ~/workspace:/root/Desktop/workspace dev:latest```
+	```docker run -it -p  6081:80  dev:latest```
 
 # Creating Azure Agent container 
 
