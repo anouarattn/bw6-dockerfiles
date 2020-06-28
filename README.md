@@ -23,3 +23,13 @@ To create an envirennement consisting of Tibco BW6 Agent + TEA we need to :
       - Production Envirennement
       
       ```docker run -dt --name PROD --hostname PROD --rm -p  8773:8777 env:latest```
+
+# Creating dev machine
+
+  1. Build the base image base.Dockerfile
+  
+	```docker build --rm -t="dev:latest" . -f dev.Dockerfile```
+	
+  2.  Run envirennement 
+	
+	```docker run -it --rm -p  6081:80 dev:latest```
